@@ -20,14 +20,14 @@
 	}
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1768px) {
 	:root {
 		--sp_gutter: 40px;
 		--sp_margin: 40px;
 	}
 }
 
-@media screen and (min-width: 2400px) {
+@media screen and (min-width: 2160px) {
 	:root {
 		--sp_gutter: 48px;
 		--sp_margin: 48px;
@@ -36,7 +36,7 @@
 
 /* Baseline Grid */
 :root {
-	--sp_baseline: 16px;
+	--sp_baseline: 8px;
 }
 
 body {
@@ -56,15 +56,17 @@ body {
 }
 
 .spectrum-grid--fixed {
-	max-width: 1200px;
+	max-width: 2160px;
 	margin: 0 auto;
 }
 
 .spectrum-grid > div:not(.grid-guide):not(.shell),
 .spectrum-grid--fixed > div:not(.grid-guide):not(.shell) {
-  border: 1px dashed rgb(127, 222, 255);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 160, 255,.5);
   padding: var(--sp_baseline) 0;
-  background-color: #fff;
+  background-color: rgba(0,160,255,.25);
 }
 
 .shell {
@@ -72,9 +74,11 @@ body {
 	grid-row: 1;
 	margin-left: calc(var(--sp_gutter) * -1);
 	margin-right: calc(var(--sp_gutter) * -1);
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(0, 160, 255,.5);
 	padding: var(--sp_baseline);
-	background-color: #fff;
-	border: 1px dashed rgb(127, 222, 255);
+	background-color: rgba(0,160,255,.25);
 }
 
 .page-title {
